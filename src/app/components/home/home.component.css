@@ -1,0 +1,60 @@
+
+.container {
+    position: relative;
+    text-align: center;
+   
+    color: white;
+  
+    
+  }
+  
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+  }
+  .centered1 {
+    position: absolute;
+    top: 25%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+   
+  }
+  .centered2 {
+    position: absolute;
+    top: 32%;
+    left: 17%;
+    
+    transform: translate(-50%, -50%);
+  }
+.footer{
+  width: 100%;
+  height: 20%;
+  color: #000;
+  background-color: rgb(174, 225, 245);
+  padding: auto;
+  margin: 1%;
+  margin-top: 1%;
+  margin-bottom: 7%;
+}
+.col-sm-2{
+  height: 20%;
+}
+.speci{
+  width: 100%;
+  height: 27%;
+  color: #000;
+  background-color: rgb(137, 153, 155);
+  padding: auto;
+  margin: 1%;
+  margin-top: 1%;
+  
+  margin-bottom: 2%;
+}
+.cardnew{
+  height: 70%;
+  width: 100%;
+  background-color: antiquewhite;
+}

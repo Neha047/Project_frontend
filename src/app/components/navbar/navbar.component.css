@@ -1,0 +1,6 @@
+.navbar .collapse .navbar-nav a{
+    color: black;
+}
+.navbar .collapse .navbar-nav a:hover{
+    color: white;
+}

@@ -1,0 +1,67 @@
+.container{
+   
+    margin-top: 10px;
+   font-size: large;
+    font-style: inherit;
+    
+
+    
+    
+}
+.card{
+    width: 50%;
+    height: 30%;
+margin-top: 6%;
+    margin-left: 25%;
+    text-align: center;
+    padding: 2%;
+ 
+}
+.error-msg{
+
+  color: tomato;
+}
+.form-check{
+  margin: 1%;
+}
+.col{
+  margin: 1%;
+}
+.text-center{
+  margin: 1%;
+
+}
+
+.form-control{
+    margin-top: 10px;
+    margin-left: 10px;
+    size: 100%;
+}
+body{
+    background-color: #525252;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  

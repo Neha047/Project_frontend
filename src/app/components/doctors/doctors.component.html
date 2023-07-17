@@ -1,0 +1,118 @@
+<div class="container mt -4" style="margin-top: 2%;">
+    <h1 style="text-align: center ;color: rgb(61, 191, 231);font-size: 40px;">Doctors...</h1>
+<div class="row" >
+  <div *ngFor="let doclists of doclist"class=" col-sm-3" >
+    <mat-card class="card"  >
+      <div>
+        <img  class="rounded-circle" alt="80x80" src="{{doclists.imgUr}}" data-holder-rendered="true"  height="160" width="160">
+        <input [(ngModel)]="doclists.name" type="text" id="lname" name="name" disabled style="font-size: 18px; background-color: transpirant; border: none ; 
+        outline: none;" >
+        <input [(ngModel)]="doclists.depart" type="text" id="depart" name="depart" disabled style="font-size: 18px; background-color: transpirant; border: none;
+        outline: none;">
+      
+      <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success" style="font-size: 18px; ">view Profile</button></a>
+      </div>
+      </mat-card>
+      </div>
+      </div>
+      </div>
+
+
+      <a href="http://localhost:4200/addDoct"><h2>add Doctors</h2></a>
+
+<!-- <div class="container" style="margin-top: 2%;">
+      <div class="row">
+        <div class=" col-sm-3" >
+          <mat-card class="card"  >
+            <div><img  class="rounded-circle" alt="80x80" src="https://image.shutterstock.com/image-photo/beautiful-female-medicine-doctor-looking-600w-300126920.jpg" data-holder-rendered="true"  height="160" width="160">
+              <h2>Name</h2>
+            <h3>Department</h3>
+            
+            <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+            </div>
+            </mat-card>
+            </div>
+            <div class=" col-sm-3" >
+              <mat-card class="card"  >
+                <div><img  class="rounded-circle" alt="80x80" src="https://media.istockphoto.com/photos/doctor-holding-digital-tablet-at-meeting-room-picture-id1189304032" data-holder-rendered="true"  height="160" width="160">
+                    <h2>Name</h2>
+                    <h3>Department</h3>
+                   
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                </div>
+                </mat-card>
+                </div>
+                <div class=" col-sm-3" >
+                  <mat-card class="card"  >
+                    <div><img  class="rounded-circle" alt="80x80" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBIVEhISEhISEhEREhISGBIREhERERERGBQaGhgUGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISGjQhISExNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0MTQ0Mf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBAIFAAEGB//EAEIQAAIBAgMFBAcGAwcEAwAAAAECAAMRBBIhBTFBUXEGImGREyMycoGhsQdCUrLB0RSC8CRiY3Oi4fEVZIOSFjNE/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQIAAwQF/8QAMBEAAgIBAwMCBAQHAQAAAAAAAAECEQMSITEEQVEiYRMycYEjkbHBM0JSodHh8AX/2gAMAwEAAhEDEQA/AHkWHVZBRCoJxTeSURqjWZdxuOR3QKiEWBOiUWNHEq3gY2r85TCMUa7L4jkZdDLXIrh4LUDlN2i1GuDuNjyMZVrzTGSZU1Rq1t0mpvN2miksASmTSnnJWhAamSQElaQhoTc2BNgSAIzJK0y0hCMyYxsCd9uErxtP/DeSyFhNSvO1B+B5r/qy/gf5SWglkJAQeHxOdcwBA3aw4EhDRkCZIxapVF7coG0uSJWRbnI2ms/hIl/CV60PpZtoJptj4SDE8ormg6SJgnkmvIMDFc0HSBeAcw7rK3absoXKbXvF1EoLeZKsYmp4eRmQ2CjeHxPFWuPOPU8SOM5nZgYpUfdqQLeExMZUU2ve3AzK9i469HB3GGE5ejtUfeBHiJZ4baSnc4PgYLDRcCSEUp4tTvjC1AdxkAFUxqliSN+oieaaNURlKnaJVl3RrA7j8Iws51ax4aToaC3VT4Ca8ORy2KZxoJ6K8Wqo4OktMPSNieE2yoRv15TVpKbE6a6C++TyyNWh46TS0f7xkogTJNqkgKHiYfDd03vcHSQgPJNmn4RqpVBIIGo5zdSsCLWN4aQLYnkkSvhHlrrlsQd1pyfbzHVaOBqVKNw5anTBGpAdwD+3xkpEti23O2mBwxyO5quN9OiEdl6kkKOl7weyu22BrkAlqLE2C10Cg9GUlfnOLXsHiX79StTzkC65bi/K+n0lun2c0jT72IqektYZQoRfCx1IlfxIdmW/Cn4PRQotpa2/SSCTjPsuxdZ0xGFrMWOEdFR2/A2YZB0KHznfGha+oJ8I9Fd0V9cWGm+Jejj9cQBWZ8itlseBfLNFYYrIlYmkawBWaIhiJArFoNgGWDZYdlkGWCggGWVO1x7Pxl0yyp2uvs/GAgrhqXcHx+pmpa7Lp3pJ/N+YzUNC2cjskepqeDNJVMODraS2SPVVOrRkJoOkzSZekVFbD23RJ2IIA4i/jL2umkqa698dIFw7J3Htmu5U3YnXjLWkW5mI7LTunrLNFgsg3hnY7zeMqsBhV3xxVkAYqzpaA7q9BOeUTo6I7q9BNfS8sqy8IssL7MSZe8esaoNpaAYazfLdGZchcgAGbcYKoq37u6HxJ7giYexsYspJbBimyRe0kDMCgzZksNGXmiZJYYMuW2XW3z6woDF7xDbmFFWg1M7iyG3R1J+QMuC6ad35CIbXClQyi2Q3N9BlOhgntFhhu1ZyVLbANUUioBJsPWKX13XQbr9Zqvt4rUNIJT7pI79VkcsDqAMtr7uPGDxWNwlGrdmX0ikHKi53FzfcNeZ/5mxt3BmqrsCrO+QZ0dcz/dOo3GYUb39S87P4REqVmBVGq+jOXS7EBifLNOioLYtflKDZWWpVZ11CFR4XI/Yn5S6xtZlzFeVuk2YZei32MeaK1Uu4hjMRY2GpiT4s8hIuSZzm1u0C0ano2Uk2BuJQ5NstUYpbl++PPIQD7SbkJzn/AMkpn7pmjtumYu5LgXz7Ufw8oF9rP4eU599spF6m10koOqB0D7WfmPKAfa1T8XyE559rLAvtgch5SaQa4l8+16n4/pEq20nb2mJ6ykqbQvraAfGmHSDWj1Hs+18NTPPP+dpkj2RucFQPNWP+tpkbSJZyWyB6qr1MbQd0eIEX2Ovq6vxjSgkKBvtfoAN8wpXJIvk2oNrmgFddJTYhfWDpLF6tT0mR1AVgWRgb3A3xLEjvjpJOLhaDF2k2WmzF7p6yxRYjswd09ZZqIi4C+RjDLvjQEBhRvjIEICSidHSGg6Cc8o3ToqQ0HQTb0nL+xTm7GhTJZjc6AAQqg213xSpisjsOGhjqtcX5i83PgzdyH8QG7o3iJ4ioA1uMFgat6rr+GRxi+tHSZM8vRa8miEfVQxh6pLAcJcKgta0paLKGGu4a+HWWqVRLOnTS9QmV29jbJbpIgiDrm7jXQCbtLW9xEhsKp1sNfCBxVBWpspAsQVPQ6GDsfGQbTebC4Gp0uTYfMiHVfYGmu55djVbDYyotRVzsgyP3gtRQTY3tyIHwiO0cYH9FdUOJNTuql2ZVsRa//E7TtFhKderUo1UDZPR1F3hlVly5gRqDdW3Sv2ZsGjSf0iqS5Fi7sXe3IE7hMU3GDa8G2OuUfZnRdnaBpYREYg1GLOxH4r7vgAo+EtF1XXjK+rdcN6Vberb0hvxpAgP/AKQWHiBLIoQAN/SaoKVJvwZZNW0vJVuliRPOe1yf2s+4v1M9NxK63nm3aof2tvdX9ZRJUxpO4lOtObKRhUmMkUosUZIF1jjrAMsgRVlgXWNMsCyxgMHlkWEPaDZYSHrXZRbYLDf5YPmSZkl2dW2Ew3+TTPmt5kJaclshfV1f5v1jWHQklbXBRb/tAbJHq6vVvqY6gIW67+75TDF6Xq8J/obNOr0+aFKlEBiDoFJAIHsg77SlxV/SDiuXfx3y/wAWPnKLFjvj3RBk2cl4BHhFvssd09ZZqJW7K9k9ZaLK48BlyM4Yb42BFsMN8aAjIBijdOjpDQdBOeUajrOkpDQdJt6Tv/3kozdin2mnrNTYWH6y3LqiAsQBbedJVbUp5qngFBnJfa3jXWnhaFNiucs7WNrhALA/FvlN7SUUzMnbrwdbstlarUZSCCd4hsSPWfCcz9mKv/DO1QlmeoSCT90AAfQztBTAzNa7HQTNLFrWleS/XTt+BKi696mPaca6ayxC2UDlpN4fCAMHI7wBjVRLjxl0YUqK5TTdleaihrEi/WMKAek8x+0rC10ZcRTeotyEKozWy87Cdt2bxbVMFh6jXu9Nbk78wFj87wRokrRbNX0sNBKLa20FL0kBZ8lVWq+jSpVNNFUupfKDY5gmm83vaXJlZsfBlKVnINRnq1GIue+9RmOp6/KWCFFt+uBiMNiqbZsPWT0DOAQA1y1Mnzf5x97KEB1eoyoq82Y6fAbzyAMapbIDYR8NUKku1ZgyjRHas9RCL/hJXylR2YNSvifS1N2GpZQOVVu6T1ID/KR9LDL+I/5Vv7/0/m9n7JDLqJY1oXL49vP5cr3Z0e0/RrhaqE6ChUSwBJtkIjqtoOgiG3WP8NWA3shRffc5VHmRHHP9f11hEN1aasLEfEaGeX9r8MyYxgRoyIyn8S66+dx8J6cDecx26wOeilUDvUWsfcewPkcvzlWWFqxrfBwqiYwm1miZjABYQLiHaAcwhAOIFodzAtGAYRBtCGQaQB6/sNbYXDDlQpfkEyE2bpQojlSp/kEyWF1nGbL/APrre8/1MsMMhZbDfYRDZg7mI99/zGMLjGpBWC5gygEbrHgZz4VqSfDv9zVJuKtdq/YFiW9oHehKnraUeJN3HQS1woLioz3Bd2bzlRilK1snBRv+kEo2pskZfKXmyR3T1lmolbsj2W96WiyuPAz5GsNxjAi+H4xkR0KTXeOonSUhoOk5xN46idJS3Cbuk7/Yoz9io2qhNQW8L+MbxeGp1EtVRHDLlswDaHrC4o2fuqGYjjugatQlhcWyjd5TXfJTXBvY+yqdGiEpiwUkD3b6COupDLyM1hnsh5awNDEM2h4HfIqW3kG7+xYodJq51PCLFmynKbeNrwNbFEUySb2Gp3aRm6AlZQ7a2oLs5UGml7A6lmlxgLehpEDLmpq+UblLjMR5mebdq9to3qqe4k+zuFhf47wZ6ZTXKqLyVR5ACas2n4UNKq759kUwTWSSbukiTG39cpBTZel/3kMdTLJ7TIQQ10IBOU3tqDobWMFVUurLnKhgRdLBhcbwTx5aTKXDibun/MQ2LgPQLX51cRXq9FZiVHT945TaygC5sALk3JsN5M3n8rWktpUShDbNdAKYqE5BVpsbWJJVgyC3EZ8n/sI9VblzA+YgcRhqbsrsisylWGbWzKbggbr3sfgOQiW1No5cqrqx1ta/T+vCLKSirY0YOTpFqvKJ7WUHD18wuPQ1Lj+U7pX7OxVYtluKmbUtuVBxNz7XwEuMRSzoyn2WVlPG9xaCE1NWhsmNwdNnkCtIkwz4R13d7xEZwuzA65mfKfw6XmOC17IRxa5RVs0CzToRsSiRriFVuRA/eKVthj7lWm3xI/eWfDa8fmCikZoFjLOtsasN2VujD9YjUwlQb0PmD9IKZKBkyLHQzHBGhBHwMiQZCHtGF0p0xyRPyibklNgByA+kyOWnE7O3Yn3qn5jGEHcXoIvs8aYr36n5jDp7K9B9Jypm2IKs1t2kpMYb1AeJEucRKXFe2PdEi+VhfJc7H9lustklTsf2W96WySR4Qr5GsPxjIi2H4xlZYhSanUS5w+OVt17iUkYwlJ9bceMvxTlF1HuJOMWtyxxNQ+0CARBYdi2pNzF6lAh1BJN476MLYiaISk5blUkq2Hqadwr8Ylh+6Trx4xzD4i4y8baTiO371Eoq6MyesAJRiCNDxE2Qh8TLCKfOxnlLRCUvCOyZjuBFusru0JKYSqQdfRkacyLfrPH6G2MUXy/xFTX++09U2xSb/prXJLCkpJJuSQASTNeTpXhlDU7uRRjzrIpUqpHk5IzAm+l+G66hdPKe5obgHgQCOhE8a2FgDicUlMbi12PJBqf2+M9oVMoC8gB8AJZ/6DWqK77/AN6/wJ0aelsHjKbMjBLZyCO9cgg7xvHC8padMIMpuht7Juvhul8Jt7EWIuPG1pypw1O06N8J6dquynNQjc3zvwlklO6KeJAPAbwIrW2eu9O74alfLh8I9QT1aA6EKB5C0GNTTdhyODScSL0eRPyuJW1Nigm5diTvNlvbiJakESBMeUVLlCxlKPysVwWzkpsWDuxItqQLc5PHVstN3zWyqx+NtPnDSr28pakUH3yL+6Df6gRJyWODa7DpPJNanZxpI5iDLRttkHxgW2S3jOCoUdTULMRINblDtsx+bQDbPqcz5RlF+RW0AdBwFoNx18zCtgqnP5GAfD1BHTku4rS8AXQHhKjEVWFXIDpmUeZEsMX6REYiwIBIuROfwtSo9emWPtVad7e+Jpwpt8lGSvB71MmTU2GY43Bf/q9+r+cwg9legljjtlLQDlXLirnfUWKkm9rjeNZW/dHQTnZU06Zrg7QDEmUuKPfHQS4xBlNij3x0ERfKwvku9kHut70tklPsg91veluhFtDexsfAwxWwr5G8PxjKxWhxjCx0AKu8dZdURYSkTeOsu6U1dP3Kcotij6xekPm0MVxLetXpCBva6yxP1P6itbIPRY6Gcr9pVf8As6KPvVAfJSZ1NAbxOJ+1BgqUN/tP03To9Hvngvcy9R/Cl9DksfhVprhXUd90zN46L+89S21WDbOqW40T+WcB2kwrKmz7AEvTsF5sQthPTBg82FyMLFqWUjldbTX1OS8eOfPqf6lOGFZMkfZfoef/AGbUwcU7H7tNreN2H7T1RwDxtPKfs6V1xjowNwjg8rgqPrPVQkq6/bO/ohukf4S+4GsMpAGt4H0ngfKHqqc3gLQRGsx0aLNXHj5GaJ8SPOGWaqQUGxNqjh2sbppYEeGpmHEt+H5/7QriRFoKJYOvisq5spOqi2g3kD9YliGLWJ3mO4lMyMByv5G/6RCpwmLqm+OxpwpVfcCRIkQhkDMRoBMIJlEM0G0AwBqYgXpDkIw0E0IGct2tpC1PT8UoNm0x/EUP8+l+dZf9rW1p9G/SUuxhfF4Yf9xS/OJph2KJnscyZMmooEO0Dd0e4/6TnSdB0Elh67uK5dixDOLsb2AJsIFm0HSc/JLU7NUFSoWxLSoxLd8dBLHFNKarWDOLG9tD1ipelhfJ0Oxz3W94y5R9LTn9k1QFNzbvGW9OuvMQrgD5LPDxhTEsPWWx1hxiF5w8C0NU946y6pmc/TxAuOol/h1v0mnA7uirImivxDg1hruh6jIqkhtbyx9El/ZE02TdZZoWJrcVzTVC2FbMpysLznNvdl8Ri2Aq4gLSRrqlOn3vixP6TrkZQNLTPSLzl0bTTumit001ymc5tjsotZMOBVam+HtldQCdALXv0Et6FZ6dMjEOjkDR0Qrm/ludY4zKeMyrh1Ya8IzbarwLW9nB9gWYYzEekUhnDMCVtpnv88w8p6SJWYfAorll9o8ZYKJbly/Flqqv9bCQx6I6bsC51PUwbn6wjnWBqcJWMjYaRaSWRcxQm04zC00u6Y0NkIyqxIs1uX7y0lZjm7/wmPq16LNGD5hZjIMZsmDYznGo0xkGMkxgmaQJFjBOZJjAsYUA5btc3fpj+6frKrs5rjMKP8ZD5G8e7Wt6yn7h+sT7J647C/5l/JGP6TXj7FE+57DMkbzc0FJxOCNlxPv1PzGRbcOgkcLUGXEDnUqfmMIlF2At3VsNTvPSc/TqNN0VuK1NhqeQiWG2O1yb72J851OHwKruHx4mOJhhylqgqoFlFhNnMB/tLCnsxzLqjSHKNIkb4aBrKvDbLbiw8o7S2WvFiemkeppDKI6wx8CvJIBQwKLbu366y0RoqsMkvgkuEVSbfJusWOim0CcKbe0IXjIvU4CWqbjwVvGpckaNG18xvIVqKE6jd4mFWQZbmHXK7snwoVTRKjSA1F/iSY6xIWKLD1Qcohbb5IklwqNUibxpLxSidY5Rbf0MiIwLNqYJzrJGDbfDYAqmDeTvBuZGQ2rTGIkLyN4GQkWlTtJwr66XAMs7xTF4ZXtfhfWZ+ohrhSLsUtMiq9Ov4hNFxzHnJ1dmjgYnUwJE57xSRr1phmaCZos+GI3E+cE1OoPvHzg0MljLNBOYqzVBx8wIJ69TkPIiTSwWc52sb1q+CfrA9jddoYb3qh8qbwXaB3eqbJuAFxciNdh8K/8AH0GbcBUNv/Gw/Wa8ceCib3Z61MmWmS4rOKweCctVzDKGd/j3jLijQsAOQAh0panqfrGEpTPGCRa5AUpQy0odacOlKWqArkBp04dUhUpwqpHURNQJUkwsIFkwsehbBKkKqzYSTbQQ0ABUNusgqwgS5k1SCrH4RiUza8ktKFRdJJVllCNghTk6zXUDlCFZBljCgEEYEhlk2GkBAPOQmydJC8hCd5FzMvIOZCG7yF5jGQcyMKJg75BtwmE6TY4RJcBXIFhAukbZYNhKHEtsQekDwitTDCWjpAVKcRwHUinqUIpVw8u3pxWpSiVQbOZxmG1MP2WogYtDyR/y2/WN43DXJ1I6SfZ7BFMRn1t6Nxr42jxA+DrbzU1eZLSoUppGEWZMgSIHVIRVm5ksSFsIqwgWZMjIBNVkgs1MhAStBHUzJkjGRMCbVdZkyREYwBpMtMmSwrJZZF1mTJCEbQno7i3G0yZIiMRqLb4QcyZFCR9J3svHLm+F7THmTJAgmMibzJkBDbAwlNdRyAmTIGEIVg2WamRGhrBssEyTJkRoKYFli7pMmRGOI1qesLgK16moFwp1twuNJkyUy+aIy+VllmmpkyXlR//Z" data-holder-rendered="true"  height="160" width="160">
+                        <h2>Name</h2>
+                        <h3>Department</h3>
+                        
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                    </div>
+                    </mat-card>
+                    </div>
+                    <div class=" col-sm-3" >
+                      <mat-card class="card"  >
+                        <div><img  class="rounded-circle" alt="80x80" src="https://image.shutterstock.com/image-photo/young-male-doctor-wearing-medical-260nw-2115378089.jpg" data-holder-rendered="true"  height="160" width="160">
+                            <h2>Name</h2>
+                            <h3>Department</h3>
+                            
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                        </div>
+                        </mat-card>
+                        </div>
+                    
+            </div>
+    
+
+            <div class="row" >
+                <div class=" col-sm-3"  >
+                  <mat-card class="card"  >
+                    <div><img  class="rounded-circle" alt="80x80" src="https://image.shutterstock.com/image-photo/beautiful-female-medicine-doctor-looking-600w-300126920.jpg" data-holder-rendered="true"  height="160" width="160">
+                      <h2>Name</h2>
+                    <h3>Department</h3>
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                    </div>
+                    </mat-card>
+                    </div>
+                    <div class=" col-sm-3" >
+                      <mat-card class="card"  >
+                        <div><img  class="rounded-circle" alt="80x80" src="https://media.istockphoto.com/photos/doctor-holding-digital-tablet-at-meeting-room-picture-id1189304032" data-holder-rendered="true"  height="160" width="160">
+                            <h2>Name</h2>
+                            <h3>Department</h3>
+                            
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                        </div>
+                        </mat-card>
+                        </div>
+                        <div class=" col-sm-3" >
+                          <mat-card class="card"  >
+                            <div><img  class="rounded-circle" alt="80x80" src="data:image/jpeg;base64,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" data-holder-rendered="true"  height="160" width="160">
+                                <h2>Name</h2>
+                                <h3>Department</h3>
+                                
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                            </div>
+                            </mat-card>
+                            </div>
+                            <div class=" col-sm-3" >
+                              <mat-card class="card"  >
+                                <div><img  class="rounded-circle" alt="80x80" src="https://image.shutterstock.com/image-photo/young-male-doctor-wearing-medical-260nw-2115378089.jpg" data-holder-rendered="true"  height="160" width="160">
+                                    <h2>Name</h2>
+                                    <h3>Department</h3>
+                                   
+                    <a href="http://localhost:4200/docprofile"><button mat-raised-button class="btn btn-success">view Profile</button></a>
+                                </div>
+                                </mat-card>
+                                </div>
+                            
+                    </div>
+</div> -->
+
+<!-- <h1>hii data
+  <p *ngFor="let doclist of doclist">
+    {{doclist.depart}}
+    {{doclist.name}}
+  </p>
+</h1> -->

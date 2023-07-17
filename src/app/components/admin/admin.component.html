@@ -1,0 +1,40 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+        <th scope="col">date</th>
+        <th scope="col">department</th>
+        <th scope="col">doctor</th>
+        <th scope="col">message</th>
+       
+      </tr>
+    </thead>
+    <tr *ngFor="let appoints of appoint">
+    
+    <tr *ngFor="let item of appoint">
+      <td>{{item.bid}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.contact}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.department}}</td>
+      <td>{{item.doctor}}</td>
+      <td>{{item.message}}</td>
+      <td>
+          <div>
+              <!-- <button class="btn btn-success" style="margin-left: 2%; ">update</button> -->
+              <a ><img src="https://img.icons8.com/external-anggara-flat-anggara-putra/344/external-edit-user-interface-anggara-flat-anggara-putra-2.png" height="25px" width="25px" ></a>
+              <!-- <button class="btn btn-danger" style="margin-left: 2%;" (click)="deleteAppoi(item.bid)">delete</button> -->
+              <img src="https://img.icons8.com/plasticine/344/filled-trash.png" (click)="deleteAppoi(item.bid)" height="25px" width="25px" style="margin-left: 6%;">
+              <!-- <button class="btn btn-info" style="margin-left: 2%;">view</button> -->
+          </div>
+      </td>
+    <tbody>
+      
+      
+    </tbody>
+  </table>

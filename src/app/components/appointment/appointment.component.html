@@ -1,0 +1,104 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 border p-4 shadow bg-light">
+            <div class="col-12">
+                <h3 class="fw-normal  fs-4 mb-4 " style="color: rgb(17, 16, 16);">Book Your appointment</h3>
+            </div>
+            <form (ngSubmit)="appointment()" #appoiment="ngForm">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input name="name" #name="ngModel" required minlength="4" [(ngModel)]="userappoin.name" type="text" class="form-control" placeholder="Name">
+                         
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            Name is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter at least 4 characters !
+                       </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <input name="email" [(ngModel)]="userappoin.email" type="text" class="form-control" placeholder="Email">
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            email is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter correct email!
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input name="contact" [(ngModel)]="userappoin.contact" type="number" class="form-control" placeholder="Contact No">
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            contact is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter at least 4 characters !
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                        <select name="department" [(ngModel)]="userappoin.department" id="department" class="form-select">
+                            <option *ngFor="let doctors of doctorlist">{{doctors.depart}}</option>
+                            <!-- <option value="1">ortho</option>
+                            <option value="2">2kkk</option>
+                            <option value="3">3uuuu</option> -->
+                            
+                        </select>
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            Department is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter at least 4 characters !
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input name="date" [(ngModel)]="userappoin.date" type="date" class="form-control" placeholder="Enter Date">
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            Date is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter at least 4 characters !
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                        <select name="doctor" [(ngModel)]="userappoin.doctor" id="doctor" class="form-select">
+                            <option *ngFor="let doctor of doctorlist">{{doctor.name}}</option>
+                           
+                        </select>
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            doctor is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter at least 4 characters !
+                       </div>
+                    </div>
+   
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Message" [(ngModel)]="userappoin.message"></textarea>
+                        <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['required']">
+                            mesage is Required !
+                         </div> 
+                  
+                         <div class="error-msg" *ngIf="(name.touched || appoiment.submitted) && name.errors?.['minlength']">
+                           Enter at least 4 characters !
+                       </div>
+                    </div>
+                    <div class="col-12 mt-5">                        
+                       <!-- <a href="http://localhost:4200/user">  <button type="submit" class="btn btn-success float-end">Book Now</button></a> -->
+                       
+                        <button type="submit" mat-raised-button class="btn btn-success btn-block mb-4" style="margin-top: 1%; font-size: 16px;" >Submit
+                        </button>
+                      <!-- //  <button (click)=" printData()">print</button> -->
+                       <button type="button" class="btn btn-outline-secondary float-end me-2">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

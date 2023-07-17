@@ -1,0 +1,29 @@
+/* .main{
+    background-image: url("https://thumbs.dreamstime.com/z/healthcare-technology-doctor-using-digital-tablet-icon-medical-network-hospital-background-162019727.jpg");
+    height: 100%;
+} */
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+  .centered1 {
+    position: absolute;
+    top: 23%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+   
+  }
+  .centered2 {
+    position: absolute;
+    top: 26%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }

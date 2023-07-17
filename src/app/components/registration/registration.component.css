@@ -1,0 +1,43 @@
+/* .container{
+   
+    margin-top: 10px;
+   font-size: large;
+    font-style: inherit;
+    
+
+    
+    
+} */
+.card{
+    width: 40%;
+
+  
+    padding: 5%;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    margin-top: 10px;
+    background-color: aliceblue;
+    
+}
+.error-msg{
+
+    color: tomato;
+}
+
+/* .form-control{
+    margin-top: 10px;
+    margin-left: 10px;
+    size: 100%;
+}
+body{
+    background-color: #525252;
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+} */
